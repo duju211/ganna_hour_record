@@ -1,0 +1,10 @@
+library(tarchetypes)
+library(conflicted)
+library(tesseract)
+library(tidyverse)
+library(targets)
+library(magick)
+library(here)
+library(fs)
+
+conflict_prefer("filter", "dplyr")
