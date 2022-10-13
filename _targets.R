@@ -7,6 +7,7 @@ df_athlete_dir <- tibble(
   mutate(athlete = map_chr(path_split(athlete_dir), 2))
 
 athlete_targets <- tar_map(
+  unlist = FALSE,
   values = df_athlete_dir, names = "athlete",
   tar_files(lap_files, dir_ls(here(athlete_dir, "lap_img"))),
   tar_target(
@@ -20,8 +21,16 @@ athlete_targets <- tar_map(
   tar_target(gg_time, vis_time(df_time))
 )
 
+combined_targets <- tar_combine(
+  df_time,
+  athlete_targets[["df_time"]],
+  command = dplyr::bind_rows(!!!.x, .id = "athlete")
+)
+
 list(
   tar_target(bw_threshold, "75"),
   
-  athlete_targets
+  athlete_targets,
+  
+  combined_targets
 )
