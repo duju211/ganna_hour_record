@@ -32,5 +32,12 @@ list(
   
   athlete_targets,
   
-  combined_targets
+  combined_targets,
+  tar_target(gg_time_all, vis_time_all(df_time)),
+  tar_target(
+    csv_time, command = {
+      out_path <- "file_out/hour_record.csv";
+      write_excel_csv(df_time, "file_out/hour_record.csv");
+      return(out_path)
+    }, format = "file")
 )
