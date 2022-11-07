@@ -33,7 +33,10 @@ list(
   athlete_targets,
   
   combined_targets,
-  tar_target(gg_time_all, vis_time_all(df_time)),
+  tar_target(
+    df_time_pro,
+    mutate(df_time, athlete = str_to_title(str_remove(athlete, "^df_time_")))),
+  tar_target(gg_time_all, vis_time_all(df_time_pro)),
   tar_target(
     csv_time, command = {
       out_path <- "file_out/hour_record.csv";

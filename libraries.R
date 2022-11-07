@@ -8,3 +8,4 @@ library(here)
 library(fs)
 
 conflict_prefer("filter", "dplyr")
+theme_set(theme_light())
