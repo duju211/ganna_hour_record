@@ -1,0 +1,59 @@
+---
+title: "Hour Record Pacing Strategies"
+description: |
+  A Comparison of Hour Record Pacing Strategies
+author:
+  - name: Nora Jones 
+    url: https://example.com/norajones
+    affiliation: Spacely Sprockets
+    affiliation_url: https://example.com/spacelysprokets
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+source("libraries.R")
+```
+
+# Idea
+
+# Data
+
+Get lap number from image:
+
+```{embed}
+"R/nr_from_image.R"
+```
+
+Example image lap time:
+
+```{r, echo=FALSE}
+knitr::include_graphics("file_in/campenaerts/lap_img/Screenshot (340).png")
+```
+
+Example image lap time:
+
+```{r, echo=FALSE}
+knitr::include_graphics("file_in/campenaerts/time_img/Screenshot (340).png")
+```
+
+Parse numbers:
+
+```{embed}
+"R/time.R"
+```
+
+```{r, echo=FALSE}
+tar_read(df_time_pro)
+```
+
+# Plot
+
+```{embed}
+"R/vis_time_all.R"
+```
+
+```{r, echo=FALSE}
+tar_read(gg_time_all)
+```
+
