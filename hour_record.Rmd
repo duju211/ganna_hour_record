@@ -17,15 +17,13 @@ source("libraries.R")
 
 # Idea
 
+The Hour Record is a attempt to drive a bike as far as possible in one hour.
+
 # Data
 
-Get lap number from image:
+The Data consists of screenshots of the lap numbers and times.
 
-```{embed}
-"R/nr_from_image.R"
-```
-
-Example image lap time:
+Example image lap number:
 
 ```{r, echo=FALSE}
 knitr::include_graphics("file_in/campenaerts/lap_img/Screenshot (340).png")
@@ -37,11 +35,27 @@ Example image lap time:
 knitr::include_graphics("file_in/campenaerts/time_img/Screenshot (340).png")
 ```
 
+Get lap number from image:
+
+```{embed}
+"R/nr_from_image.R"
+```
+
 Parse numbers:
 
 ```{embed}
 "R/time.R"
 ```
+
+Preprocess data:
+
+* Nice athlete name
+* Speed in kilometers per hour
+
+```{embed}
+"R/time_pro.R"
+```
+
 
 ```{r, echo=FALSE}
 tar_read(df_time_pro)

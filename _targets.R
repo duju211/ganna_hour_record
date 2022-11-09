@@ -4,7 +4,12 @@ walk(dir_ls("R"), source)
 
 df_athlete_dir <- tibble(
   athlete_dir = dir_ls("file_in/", type = "directory")) |>
-  mutate(athlete = map_chr(path_split(athlete_dir), 2))
+  mutate(
+    athlete = map_chr(path_split(athlete_dir), 2),
+    distance = case_when(
+      athlete == "ganna" ~ 56.792,
+      athlete == "campenaerts" ~ 55.089,
+      TRUE ~ NA_real_))
 
 athlete_targets <- tar_map(
   unlist = FALSE,
@@ -33,9 +38,7 @@ list(
   athlete_targets,
   
   combined_targets,
-  tar_target(
-    df_time_pro,
-    mutate(df_time, athlete = str_to_title(str_remove(athlete, "^df_time_")))),
+  tar_target(df_time_pro, time_pro(df_time, df_athlete_dir)),
   tar_target(gg_time_all, vis_time_all(df_time_pro)),
   tar_target(
     csv_time, command = {
