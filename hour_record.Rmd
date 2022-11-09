@@ -67,7 +67,6 @@ tar_read(df_time_pro)
 "R/vis_time_all.R"
 ```
 
-```{r, echo=FALSE}
+```{r vis_hour_record, echo=FALSE}
 tar_read(gg_time_all)
 ```
-

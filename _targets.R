@@ -45,5 +45,10 @@ list(
       out_path <- "file_out/hour_record.csv";
       write_excel_csv(df_time, "file_out/hour_record.csv");
       return(out_path)
-    }, format = "file")
+    }, format = "file"),
+  
+  tar_render(hour_record_post, "hour_record.Rmd"),
+  tar_render(
+    hour_record_readme, "hour_record.Rmd", output_format = "md_document",
+    output_file = "README.md")
 )
