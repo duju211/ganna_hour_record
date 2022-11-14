@@ -3,10 +3,8 @@ title: "Hour Record Pacing Strategies"
 description: |
   A Comparison of Hour Record Pacing Strategies
 author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+  - name: Julian During 
+    url: https://www.datannery.com/
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
