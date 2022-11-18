@@ -8,6 +8,8 @@ author:
 date: "`r Sys.Date()`"
 output: distill::distill_article
 preview: !r targets::tar_read(png_time_all)
+repository_url: !r targets::tar_read(repo)
+creative_commons: CC BY
 ---
 
 ```{r setup, include=FALSE}
