@@ -76,7 +76,7 @@ You can find the preprocessed data as CSV file [here](`r tar_read(csv_url)`).
 "R/vis_time_all.R"
 ```
 
-```{r vis_hour_record, echo=FALSE}
+```{r vis_hour_record, echo=FALSE, preview=TRUE}
 tar_read(gg_time_all)
 ```
 
