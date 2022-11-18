@@ -1,7 +1,8 @@
 # Idea
 
 The Hour Record is a attempt to drive a bike as far as possible in one
-hour.
+hour. Get the data from two different hour record attempts and compare
+the different pacing strategies in the following post.
 
 # Data
 
@@ -62,6 +63,9 @@ Preprocess data:
     ##  9 campenaerts  16.3      9     9  55.2     55.1
     ## 10 campenaerts  16.3     10    10  55.3     55.1
     ## # … with 434 more rows
+
+You can find the preprocessed data
+[here](https://raw.githubusercontent.com/duju211/ganna_hour_record/master/file_out/hour_record.csv).
 
 # Plot
 

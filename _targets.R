@@ -34,6 +34,11 @@ combined_targets <- tar_combine(
 
 list(
   tar_target(bw_threshold, "75"),
+  tar_target(
+    csv_url,
+    str_glue(
+      "https://raw.githubusercontent.com/duju211/ganna_hour_record/master/",
+      "file_out/hour_record.csv")),
   
   athlete_targets,
   

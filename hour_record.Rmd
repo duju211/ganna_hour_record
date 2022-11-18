@@ -16,6 +16,8 @@ source("libraries.R")
 # Idea
 
 The Hour Record is a attempt to drive a bike as far as possible in one hour.
+Get the data from two different hour record attempts and compare the different
+pacing strategies in the following post.
 
 # Data
 
@@ -58,6 +60,8 @@ Preprocess data:
 ```{r, echo=FALSE}
 tar_read(df_time_pro)
 ```
+
+You can find the preprocessed data as CSV file [here](`r tar_read(csv_url)`).
 
 # Plot
 
