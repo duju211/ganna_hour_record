@@ -8,7 +8,7 @@ author:
 creative_commons: CC BY
 date: "`r Sys.Date()`"
 output: distill::distill_article
-preview: !r targets::tar_read(png_time_all)
+preview: !r targets::tar_read(github_png)
 repository_url: !r targets::tar_read(repo)
 ---
 
