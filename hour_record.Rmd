@@ -6,6 +6,7 @@ author:
   - name: Julian During 
     url: https://www.datannery.com/
 creative_commons: CC BY
+preview: "https://raw.githubusercontent.com/duju211/ganna_hour_record/master/file_out/gg_time_all.png"
 repository_url: "https://github.com/duju211/ganna_hour_record"
 date: "`r Sys.Date()`"
 output: distill::distill_article
