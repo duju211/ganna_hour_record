@@ -41,11 +41,6 @@ list(
       "file_out/hour_record.csv")),
   tar_target(repo, "https://github.com/duju211/ganna_hour_record"),
   tar_target(png_out_path, "file_out/gg_time_all.png"),
-  tar_target(
-    github_png,
-    str_glue(
-      "https://github.com/duju211/ganna_hour_record/blob/master/file_out/",
-      "gg_time_all.png")),
   
   athlete_targets,
   
