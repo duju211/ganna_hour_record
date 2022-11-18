@@ -39,6 +39,8 @@ list(
     str_glue(
       "https://raw.githubusercontent.com/duju211/ganna_hour_record/master/",
       "file_out/hour_record.csv")),
+  tar_target(repo, "https://github.com/duju211/ganna_hour_record"),
+  tar_target(png_out_path, "file_out/gg_time_all.png"),
   
   athlete_targets,
   
@@ -51,6 +53,7 @@ list(
       write_excel_csv(df_time, "file_out/hour_record.csv");
       return(out_path)
     }, format = "file"),
+  tar_target(png_time_all, save_gg(gg_time_all, png_out_path)),
   
   tar_render(hour_record_post, "hour_record.Rmd"),
   tar_render(

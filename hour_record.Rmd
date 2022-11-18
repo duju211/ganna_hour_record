@@ -7,6 +7,7 @@ author:
     url: https://www.datannery.com/
 date: "`r Sys.Date()`"
 output: distill::distill_article
+preview: !r targets::tar_read(png_time_all)
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +18,12 @@ source("libraries.R")
 
 The Hour Record is a attempt to drive a bike as far as possible in one hour.
 Get the data from two different hour record attempts and compare the different
-pacing strategies in the following post.
+pacing strategies in the following post. If you want to reproduce this analysis,
+you have to perform the following steps:
+
+* Clone the repository from [here](`r tar_read(repo)`)
+* Install the packages listed in `libraries.R`
+* Run `targets::tar_make()`
 
 # Data
 
@@ -72,3 +78,5 @@ You can find the preprocessed data as CSV file [here](`r tar_read(csv_url)`).
 ```{r vis_hour_record, echo=FALSE}
 tar_read(gg_time_all)
 ```
+
+In the final plot you can see the different pacing strategies of the attempts.

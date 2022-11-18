@@ -2,7 +2,13 @@
 
 The Hour Record is a attempt to drive a bike as far as possible in one
 hour. Get the data from two different hour record attempts and compare
-the different pacing strategies in the following post.
+the different pacing strategies in the following post. If you want to
+reproduce this analysis, you have to perform the following steps:
+
+-   Clone the repository from
+    [here](https://github.com/duju211/ganna_hour_record)
+-   Install the packages listed in `libraries.R`
+-   Run `targets::tar_make()`
 
 # Data
 
@@ -64,7 +70,7 @@ Preprocess data:
     ## 10 campenaerts  16.3     10    10  55.3     55.1
     ## # … with 434 more rows
 
-You can find the preprocessed data
+You can find the preprocessed data as CSV file
 [here](https://raw.githubusercontent.com/duju211/ganna_hour_record/master/file_out/hour_record.csv).
 
 # Plot
@@ -87,3 +93,6 @@ You can find the preprocessed data
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 ![](README_files/figure-markdown_strict/vis_hour_record-1.png)
+
+In the final plot you can see the different pacing strategies of the
+attempts.
