@@ -7,14 +7,15 @@ author:
     url: https://www.datannery.com/
 creative_commons: CC BY
 preview: "https://raw.githubusercontent.com/duju211/ganna_hour_record/master/file_out/gg_time_all.png"
-base_url: "https://www.datannery.com/posts/hour-record-pacing-strategies/"
 repository_url: "https://github.com/duju211/ganna_hour_record"
+base_url: "https://www.datannery.com/posts/hour-record-pacing-strategies/"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
 
 ```{r setup, include=FALSE}
 source("libraries.R")
+Sys.setenv("RSTUDIO_VERSION" = '1.4.1725')
 ```
 
 # Idea
